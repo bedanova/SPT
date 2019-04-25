@@ -31,10 +31,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textDvojkova = new System.Windows.Forms.TextBox();
+            this.textOsmickova = new System.Windows.Forms.TextBox();
+            this.textSestnactkova = new System.Windows.Forms.TextBox();
+            this.textSestkova = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -74,34 +74,34 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Zadejte nenulové kladné číslo v desítkové soustavě:";
             // 
-            // textBox2
+            // textDvojkova
             // 
-            this.textBox2.Location = new System.Drawing.Point(45, 202);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(296, 26);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textDvojkova.Location = new System.Drawing.Point(45, 202);
+            this.textDvojkova.Name = "textDvojkova";
+            this.textDvojkova.Size = new System.Drawing.Size(296, 26);
+            this.textDvojkova.TabIndex = 3;
+            this.textDvojkova.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox3
+            // textOsmickova
             // 
-            this.textBox3.Location = new System.Drawing.Point(45, 279);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(296, 26);
-            this.textBox3.TabIndex = 4;
+            this.textOsmickova.Location = new System.Drawing.Point(45, 279);
+            this.textOsmickova.Name = "textOsmickova";
+            this.textOsmickova.Size = new System.Drawing.Size(296, 26);
+            this.textOsmickova.TabIndex = 4;
             // 
-            // textBox4
+            // textSestnactkova
             // 
-            this.textBox4.Location = new System.Drawing.Point(45, 355);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(296, 26);
-            this.textBox4.TabIndex = 5;
+            this.textSestnactkova.Location = new System.Drawing.Point(45, 355);
+            this.textSestnactkova.Name = "textSestnactkova";
+            this.textSestnactkova.Size = new System.Drawing.Size(296, 26);
+            this.textSestnactkova.TabIndex = 5;
             // 
-            // textBox5
+            // textSestkova
             // 
-            this.textBox5.Location = new System.Drawing.Point(45, 437);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(296, 26);
-            this.textBox5.TabIndex = 6;
+            this.textSestkova.Location = new System.Drawing.Point(45, 437);
+            this.textSestkova.Name = "textSestkova";
+            this.textSestkova.Size = new System.Drawing.Size(296, 26);
+            this.textSestkova.TabIndex = 6;
             // 
             // label2
             // 
@@ -207,10 +207,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textSestkova);
+            this.Controls.Add(this.textSestnactkova);
+            this.Controls.Add(this.textOsmickova);
+            this.Controls.Add(this.textDvojkova);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
@@ -230,10 +230,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textDvojkova;
+        private System.Windows.Forms.TextBox textOsmickova;
+        private System.Windows.Forms.TextBox textSestnactkova;
+        private System.Windows.Forms.TextBox textSestkova;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

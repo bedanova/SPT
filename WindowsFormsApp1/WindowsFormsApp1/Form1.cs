@@ -47,11 +47,20 @@ namespace WindowsFormsApp1
             
             if (dvojkova.Checked)
             {
-                textBox2.Text = cislo.ToString();
+                string C = PrevodyCisel.Binary(cislo);
+                textDvojkova.Text = C;
             }
             if (sestkova.Checked)
             {
-
+                textSestkova.Text = cislo.ToString();
+            }
+            if (osmickova.Checked)
+            {
+                textOsmickova.Text = cislo.ToString();
+            }
+            if (sestnactkova.Checked)
+            {
+                textSestnactkova.Text = cislo.ToString();
             }
         }
 
