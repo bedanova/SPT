@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ulong cislo = 0;
+            uint cislo = 0;
             if (textBox1.TextLength == 0)
             {
                 MessageBox.Show("První pole nesmí zůstat nevyplněno!");
@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-                    cislo = Convert.ToUInt64(textBox1.Text);
+                    cislo = Convert.ToUInt32(textBox1.Text);
                 }
                 catch (FormatException)
                 {
@@ -47,20 +47,27 @@ namespace WindowsFormsApp1
             
             if (dvojkova.Checked)
             {
-                string C = PrevodyCisel.Binary(cislo);
-                textDvojkova.Text = C;
+                if (cislo == 0) textDvojkova.Text = "0";
+                else
+                {
+                    string C = PrevodyCisel.Binary(cislo);
+                    textDvojkova.Text = C;
+                }
             }
             if (sestkova.Checked)
             {
-                textSestkova.Text = cislo.ToString();
+                string C = PrevodyCisel.Hex(cislo);
+                textSestkova.Text = C;
             }
             if (osmickova.Checked)
             {
-                textOsmickova.Text = cislo.ToString();
+                string C = PrevodyCisel.Okta(cislo);
+                textOsmickova.Text = C;
             }
             if (sestnactkova.Checked)
             {
-                textSestnactkova.Text = cislo.ToString();
+                string C = PrevodyCisel.HexDec(cislo);
+                textSestnactkova.Text = C;
             }
         }
 
