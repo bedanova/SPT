@@ -11,18 +11,18 @@ namespace WindowsFormsApp1
 
             public static string Binary(ulong VstupBin)
             {
-                int vstupBin = Convert.ToInt32(VstupBin);
-                int zbytekBin = 0;
+                ulong vstupBin = Convert.ToUInt64(VstupBin);
+                ulong zbytekBin = 0;
 
-                List<int> bin = new List<int>();
+                List<ulong> bin = new List<ulong>();
                 while (vstupBin > 0)
                 {
                     zbytekBin = vstupBin % 2;
                     bin.Add(zbytekBin);
                     vstupBin /= 2;
                 }
-                int[] pole_List_Bin = bin.ToArray();
-                int[] pole_Bin_mirror = new int[pole_List_Bin.Length];
+                ulong[] pole_List_Bin = bin.ToArray();
+                ulong[] pole_Bin_mirror = new ulong[pole_List_Bin.Length];
                 for (int i = 0, j = pole_List_Bin.Length - 1; i < pole_List_Bin.Length; i++, j--)
                 {
                     pole_Bin_mirror[j] = pole_List_Bin[i];
