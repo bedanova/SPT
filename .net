@@ -1,0 +1,143 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp16
+{
+    //interface ISoustava
+    //{
+    //    string VratHodnotu();
+    //}
+
+
+    //class Binary :ISoustava
+    //{
+    //    int[] pole_bin = new int[10];
+    //    public string VratHodnotu()
+    //    {
+    //        return string.Join("", pole_bin);
+    //    }
+    //}
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            //decimal to binary
+            
+           int dec = 670;
+            int[] pole_bin =new int[10];
+            
+            for (int i = pole_bin.Length-1; i < pole_bin.Length; i--)
+            {
+                if (dec > 0)
+                {
+                    int zbytek = dec % 2;
+                    pole_bin[i] = zbytek;
+                    dec = dec / 2;
+                 
+                }
+                else break;                
+            }
+            Console.WriteLine(string.Join("", pole_bin));
+
+
+            ////binary to decimal         
+            //int[] pole_bin = {1,1,0,1,0,0,1};
+            //double mezisoucet_bin = 0;
+
+            //for (int i = pole_bin.Length - 1, j =0; i >= 0; i--, j++)
+            //{
+            //    if (pole_bin[i] == 1)
+            //    {
+            //        mezisoucet_bin += Math.Pow(2, j);                    
+            //    }               
+            //}
+            //Console.WriteLine(mezisoucet_bin);
+
+
+            //10 to 8
+
+            int vstupOsm = 670;
+            int zbytekOsmi = 0;
+            //int delkaPole =;
+            int[] pole_Osm = new int[10];
+            for (int i = pole_Osm.Length - 1; i >=0 ; i--)
+            {
+                if (vstupOsm >= 0)              
+                {
+                    zbytekOsmi = vstupOsm % 8;
+                    pole_Osm[i] = zbytekOsmi;
+                    vstupOsm /= 8;
+                    //delkaPole++;
+                }
+                else break;
+            }
+            Console.WriteLine(string.Join("",pole_Osm));
+
+
+            // 10 to 16
+
+
+            int vstupHex = 670;
+            int zbytekHex = 0;
+
+            char[] pole_Hex = new char[10];
+            for (int i=pole_Hex.Length -1; i>= 0; i--)
+            {
+                if (vstupHex >= 0)
+                {
+                    zbytekHex = vstupHex % 16;
+
+                    if (zbytekHex == 0) zbytekHex = (char)'0';
+                    if (zbytekHex == 1) zbytekHex = (char)'1';
+                    if (zbytekHex == 2) zbytekHex = (char)'2';
+                    if (zbytekHex == 3) zbytekHex = (char)'3';
+                    if (zbytekHex == 4) zbytekHex = (char)'4';
+                    if (zbytekHex == 5) zbytekHex = (char)'5';
+                    if (zbytekHex == 6) zbytekHex = (char)'6';
+                    if (zbytekHex == 7) zbytekHex = (char)'7';
+                    if (zbytekHex == 8) zbytekHex = (char)'8';
+                    if (zbytekHex == 9) zbytekHex = (char)'9';
+                    if (zbytekHex == 10) zbytekHex = (char)'A';
+                    if (zbytekHex == 11) zbytekHex = (char)'B';
+                    if (zbytekHex == 12) zbytekHex = (char)'C';
+                    if (zbytekHex == 13) zbytekHex = (char)'D';
+                    if (zbytekHex == 14) zbytekHex = (char)'E';
+                    if (zbytekHex == 15) zbytekHex = (char)'F';
+                   
+                    pole_Hex[i] = (char)zbytekHex;  
+                    vstupHex /= 16;
+                }
+                else break;
+            }
+            Console.WriteLine(string.Join("", pole_Hex));
+
+
+
+
+            //10 to 6
+
+            int vstupSix = 670;
+            int zbytekSix = 0;
+            
+            int[] pole_Six = new int[10];
+            for (int i = pole_Six.Length - 1; i >= 0; i--)
+            {
+                if (vstupSix >= 0)
+                {
+                    zbytekSix = vstupSix % 6;
+                    pole_Six[i] = zbytekSix;
+                    vstupSix /= 6;                    
+                }
+                else break;
+            }
+            Console.WriteLine(string.Join("", pole_Six));
+
+        }
+    }
+}
+
