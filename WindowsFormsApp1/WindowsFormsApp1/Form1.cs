@@ -46,31 +46,32 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Zvolte alespoň jednu soustavu, do které chcete číslo převést!");
             }
-            textDvojkova.Clear();
-            textSestkova.Clear();
-            textSestnactkova.Clear();
-            textOsmickova.Clear();
             
+
             if (dvojkova.Checked)
             {
                 string C = PrevodyCisel.Binary(cislo);
                 textDvojkova.Text = C;
             }
+            else textDvojkova.Clear();
             if (sestkova.Checked)
             {
                 string C = PrevodyCisel.Hex(cislo);
                 textSestkova.Text = C;
             }
+            else textSestkova.Clear();
             if (osmickova.Checked)
             {
                 string C = PrevodyCisel.Okta(cislo);
                 textOsmickova.Text = C;
             }
+            else textOsmickova.Clear();
             if (sestnactkova.Checked)
             {
                 string C = PrevodyCisel.HexDec(cislo);
                 textSestnactkova.Text = C;
             }
+            else textSestnactkova.Clear();
         }
 
         private void Form1_Load(object sender, EventArgs e)
