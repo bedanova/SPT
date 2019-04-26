@@ -46,6 +46,10 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Zvolte alespoň jednu soustavu, do které chcete číslo převést!");
             }
+            textDvojkova.Clear();
+            textSestkova.Clear();
+            textSestnactkova.Clear();
+            textOsmickova.Clear();
             
             if (dvojkova.Checked)
             {
