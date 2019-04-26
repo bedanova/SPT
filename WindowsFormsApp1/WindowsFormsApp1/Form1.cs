@@ -20,7 +20,9 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             uint cislo = 0;
+            
             if (textBox1.TextLength == 0)
             {
                 MessageBox.Show("První pole nesmí zůstat nevyplněno!");
@@ -47,12 +49,8 @@ namespace WindowsFormsApp1
             
             if (dvojkova.Checked)
             {
-                if (cislo == 0) textDvojkova.Text = "0";
-                else
-                {
-                    string C = PrevodyCisel.Binary(cislo);
-                    textDvojkova.Text = C;
-                }
+                string C = PrevodyCisel.Binary(cislo);
+                textDvojkova.Text = C;
             }
             if (sestkova.Checked)
             {
